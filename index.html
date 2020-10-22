@@ -151,7 +151,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>VCR</th>
                       <th>2:57</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -159,7 +162,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Crystalised</th>
                       <th>3:22</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -167,7 +173,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Islands</th>
                       <th>2:41</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -175,7 +184,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Heart Skipped a Beat</th>
                       <th>4:02</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -183,7 +195,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Fantasy</th>
                       <th>2:38</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -191,7 +206,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Shelter</th>
                       <th>4:30</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -199,7 +217,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Basic Space</th>
                       <th>3:08</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -207,7 +228,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Infinity</th>
                       <th>5:13</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -215,7 +239,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Night Time</th>
                       <th>3:37</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                     <tr>
@@ -223,7 +250,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                       <th>Stars</th>
                       <th>4:23</th>
                       <th>
-                        <button type="button" class="btn btn-dark"></button>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
                       </th>
                     </tr>
                   </tbody>
@@ -292,6 +322,17 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                                     class="form-control"
                                     id="trackName"
                                     placeholder="What's it called?"
+                                  />
+                                </div>
+                                <div class="form-group">
+                                  <label for="trackFeature"
+                                    >Track Featuring</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="trackFeature"
+                                    placeholder="Are there other artists?"
                                   />
                                 </div>
                               </form>
@@ -1525,7 +1566,15 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         </div>
       </div>
     </footer>
-
+    <script>
+      let buttons = document.querySelectorAll(".deleterow");
+      buttons.forEach((element) => {
+        element.onclick = function (e) {
+          const node = e.currentTarget;
+          node.parentNode.parentNode.remove();
+        };
+      });
+    </script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

@@ -116,7 +116,7 @@ h1 {
   transition: opacity 0.3s ease;
 }
 
-.deleterow:hover thead {
+.deleterow:hover {
   opacity: 0;
   background-color: blanchedalmond;
 }
