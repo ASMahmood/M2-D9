@@ -101,6 +101,16 @@ h1 {
   letter-spacing: 0.1rem;
 }
 
+.card-text table {
+  font-family: "Caveat", cursive;
+  color: #abc4ab;
+}
+
+.card-text table tbody tr:nth-of-type(odd) {
+  background-color: #dcc9b6;
+  color: #6d4c3d;
+}
+
 #hallOfShame {
   background-color: #6d4c3d;
 }
