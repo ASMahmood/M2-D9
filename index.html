@@ -40,27 +40,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
     />
     <link rel="stylesheet" href="style.css" />
     <title>Music</title>
-    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
 
-    <style>
-      /* EXERCISE 1
-            For all Albums we'd like to have a consistent style.
-            Create a class for:
-            - The album container
-            - The album cover
-            - The album title
-            - The album group / singer / dj
-            - The album genre
-            - The album duration
-            - etc
-         */
-    </style>
+    <style></style>
   </head>
   <body>
-    <!-- EXERCISE 2 
-            Implement a navigation bar using the bootstrap component
-            This navigation bar must be linked to every section in your page
-        -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <a class="navbar-brand" href="#"
         ><img src="img/navbar-icon.png" alt="music note" width="15px"
@@ -94,13 +77,18 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
       </div>
     </nav>
 
-    <!-- EXERCISE 3
-            Create a responsive section for your favourite albums.
-            In this section you should have:
-            - 4 albums per row when the screen is very large
-            - 3 albums per row when you are on a tablet (or a smaller window)
-            - 2 albums per row when you are on a small screen
-        -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0 py-1">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item"><a href="#">This Breacdrumb</a></li>
+        <li class="breadcrumb-item"><a href="#">Leads Nowhere</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          It's Redundant
+        </li>
+      </ol>
+    </nav>
+
     <div id="albums" class="container-fluid cardsBackground">
       <div class="row text-center">
         <div
@@ -760,17 +748,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         </div>
       </div>
     </div>
-    <!-- EXERCISE 4
-            Create a section for the album review.
-            Pick one of your fav albums, and create a section with:
-            - Cover
-            - Title
-            - Band
-            - Lenght
-            - Genre
-            - Tracklist
-            - ... And whatever you think it's interesting about it!
-        -->
+
     <div id="info" class="container">
       <div class="row mt-4">
         <div class="col-5 col-md-3">
@@ -1195,10 +1173,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         </div>
       </div>
     </div>
-    <!-- EXERCISE 5
-            Worst album list! Find out the music you don't really like or you find overrated and list it
-            in this "hall of shame" chart!
-        -->
+
     <section id="hallOfShame">
       <div class="container mt-4">
         <div class="col-12 text-center">
@@ -1243,11 +1218,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         </div>
       </div>
     </section>
-    <!-- EXERCISE 6
-            Do you have any musician / band you admire or you are fan of?
-            This section is dedicated to him / her / them!
-            Feel free to experiment in this part of the page.
-        -->
+
     <div id="stan" class="container mt-4">
       <div class="col-12 text-center">
         <h2>One of the Best Albums</h2>
@@ -1271,11 +1242,6 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         </div>
       </div>
     </div>
-    <!-- EXERCISE 7
-            Just covers!
-            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
-            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
-        -->
 
     <div id="tapestry" class="container-fluid text-center mt-4">
       <img src="img/bastion.jpg" alt="..." />
@@ -1309,9 +1275,6 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
       <img src="img/the-life-of-pablo.jpg" alt="..." />
     </div>
 
-    <!-- EXERCISE 8
-            Implement a footer with some information / social links
-        -->
     <footer>
       <div class="container-fluid mt-4">
         <div class="row bg-dark text-light">
@@ -1328,19 +1291,6 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         </div>
       </div>
     </footer>
-    <!-- EXTRA:
-         EXERCISE 9
-            Create album details that are going to be toggled on and off by clicking on the album image
-        -->
-
-    <!-- EXERCISE 10
-            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
-        -->
-
-    <!--
-            EXERCISE 11
-            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
-        -->
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

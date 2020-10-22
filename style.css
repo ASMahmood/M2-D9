@@ -6,6 +6,20 @@ nav {
   background-color: #6d4c3d;
 }
 
+nav ol {
+  background-color: #dcc9b6 !important;
+}
+
+nav ol li a {
+  color: white;
+  text-decoration: underline;
+}
+
+nav ol li a:hover {
+  color: #6d4c3d;
+  text-decoration: underline;
+}
+
 .card {
   padding: 0;
 }
