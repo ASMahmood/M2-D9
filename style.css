@@ -121,6 +121,14 @@ h1 {
   background-color: blanchedalmond;
 }
 
+.addTrack {
+  transition: box-shadow 0.3s ease;
+}
+
+.addTrack:hover {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
 #hallOfShame {
   background-color: #6d4c3d;
 }
