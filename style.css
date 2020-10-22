@@ -8,6 +8,7 @@ nav {
 
 nav ol {
   background-color: #dcc9b6 !important;
+  border-radius: 0px !important;
 }
 
 nav ol li a {
@@ -18,6 +19,30 @@ nav ol li a {
 nav ol li a:hover {
   color: #6d4c3d;
   text-decoration: underline;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  color: #6d4c3d;
+}
+
+.jumbotron {
+  height: 40vh;
+  background-image: url(img/jumbotron-background.jpg);
+  background-size: cover;
+  background-repeat: none;
+  background-position: center;
+}
+
+.jumbotron p {
+  font-family: "Caveat", cursive;
+  color: #6d4c3d;
+  font-size: 25px;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  color: #6d4c3d;
 }
 
 .card {
@@ -63,6 +88,17 @@ nav ol li a:hover {
   background: #6d4c3d;
   font-family: "Caveat", cursive;
   color: #abc4ab;
+}
+
+.xxBadge {
+  top: 1rem;
+  right: 2rem;
+  background-color: red;
+  color: white;
+
+  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
 }
 
 #hallOfShame {
