@@ -111,6 +111,16 @@ h1 {
   color: #6d4c3d;
 }
 
+.testROW {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.deleterow:hover thead {
+  opacity: 0;
+  background-color: blanchedalmond;
+}
+
 #hallOfShame {
   background-color: #6d4c3d;
 }

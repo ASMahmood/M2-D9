@@ -110,7 +110,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             alt="..."
           />
           <span class="badge position-absolute xxBadge">Indie Pop</span>
-          <div class="card-body">
+          <div class="card-body px-0">
             <h4 class="card-title albumTitle">xx</h4>
             <h5 class="card-text albumArtist">The xx</h5>
             <div class="d-flex justify-content-around">
@@ -132,62 +132,99 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                     <th scope="col">#</th>
                     <th scope="col">Track Name</th>
                     <th scope="col">Length</th>
+                    <th scope="col">Delete</th>
                   </thead>
-                  <tbody>
+                  <tbody class="align-items-center">
                     <tr>
                       <th scope="row">1</th>
                       <th>Intro</th>
                       <th>2:08</th>
+                      <th>
+                        <button
+                          type="button"
+                          class="btn btn-dark deleterow"
+                        ></button>
+                      </th>
                     </tr>
-                    <tr>
+                    <tr class="testRow">
                       <th scope="row">2</th>
                       <th>VCR</th>
                       <th>2:57</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">3</th>
                       <th>Crystalised</th>
                       <th>3:22</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">4</th>
                       <th>Islands</th>
                       <th>2:41</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">5</th>
                       <th>Heart Skipped a Beat</th>
                       <th>4:02</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">6</th>
                       <th>Fantasy</th>
                       <th>2:38</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">7</th>
                       <th>Shelter</th>
                       <th>4:30</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">8</th>
                       <th>Basic Space</th>
                       <th>3:08</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">9</th>
                       <th>Infinity</th>
                       <th>5:13</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">10</th>
                       <th>Night Time</th>
                       <th>3:37</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                     <tr>
                       <th scope="row">11</th>
                       <th>Stars</th>
                       <th>4:23</th>
+                      <th>
+                        <button type="button" class="btn btn-dark"></button>
+                      </th>
                     </tr>
                   </tbody>
                 </table>
@@ -1335,10 +1372,10 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
     </div>
 
     <footer>
-      <div class="container-fluid mt-4">
+      <div class="container-fluid bg-dark mt-4">
         <div class="row bg-dark text-light">
           <div
-            class="col d-flex flex-row justify-content-around align-items-center"
+            class="col d-flex flex-row justify-content-around align-items-center mt-3"
           >
             <h6 class="my-auto">Abdul's Taste in Music</h6>
             <h6 class="my-auto">Not Copyright</h6>
@@ -1348,6 +1385,36 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             <a href="https://github.com/ASMahmood">GitHub</a>
           </div>
         </div>
+
+        <h2 class="row bg-dark text-light my-3 justify-content-center">
+          Contact Me
+        </h2>
+        <form class="row bg-dark text-light text-center">
+          <div class="col d-flex flex-row justify-content-center">
+            <div class="form-group mr-3">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+              <button type="button" class="btn bg-light btn-light mt-1">
+                Send
+              </button>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Message</label>
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                placeholder="What do you want to tell me?"
+              ></textarea>
+            </div>
+          </div>
+        </form>
       </div>
     </footer>
 
