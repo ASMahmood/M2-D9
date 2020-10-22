@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day.
+- You can ask for tutor's help.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music</title>
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+
+    <style>
+      /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc
+         */
+    </style>
+  </head>
+  <body>
+    <!-- EXERCISE 2 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <a class="navbar-brand" href="#"
+        ><img src="img/navbar-icon.png" alt="music note" width="15px"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#albums">Albums</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#hallOfShame">Hall of Shame</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stan">Stan</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- EXERCISE 3
+            Create a responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller window)
+            - 2 albums per row when you are on a small screen
+        -->
+    <div id="albums" class="container-fluid cardsBackground">
+      <div class="row text-center">
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img
+            src="img/xx_album_cover.svg.png"
+            class="card-img-top rounded"
+            alt="..."
+          />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">xx</h4>
+            <h5 class="card-text albumArtist">The xx</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Indie Pop</h5>
+              <h5 class="card-text albumDuration">38:34</h5>
+            </div>
+
+            <a
+              href="#xxTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="xxTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">Intro</li>
+                  <li class="list-group-item albumTracklist">VCR</li>
+                  <li class="list-group-item albumTracklist">Crystalised</li>
+                  <li class="list-group-item albumTracklist">Islands</li>
+                  <li class="list-group-item albumTracklist">
+                    Heart Skipped a Beat
+                  </li>
+                  <li class="list-group-item albumTracklist">Fantasy</li>
+                  <li class="list-group-item albumTracklist">Shelter</li>
+                  <li class="list-group-item albumTracklist">Basic Space</li>
+                  <li class="list-group-item albumTracklist">Infinity</li>
+                  <li class="list-group-item albumTracklist">Night Time</li>
+                  <li class="list-group-item albumTracklist">Stars</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img src="img/starbomb.webp" class="card-img-top rounded" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">Starbomb</h4>
+            <h5 class="card-text albumArtist">Starbomb</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Comedy hip hop</h5>
+              <h5 class="card-text albumDuration">26:58</h5>
+            </div>
+
+            <a
+              href="#starbombTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="starbombTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">Intro</li>
+                  <li class="list-group-item albumTracklist">
+                    I Choose You to Die
+                  </li>
+                  <li class="list-group-item albumTracklist">Luigi's Ballad</li>
+                  <li class="list-group-item albumTracklist">
+                    It's Dangerous to Do Alone
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Mega Marital Problems
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Rap Battle: Ryu vs. Ken
+                  </li>
+                  <li class="list-group-item albumTracklist">Crasher-vania</li>
+                  <li class="list-group-item albumTracklist">
+                    The Book of Nook
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Sonic's Best Pal
+                  </li>
+                  <li class="list-group-item albumTracklist">Regretroid</li>
+                  <li class="list-group-item albumTracklist">
+                    Kirby's Adventures in Reamland
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    The Simple Plot of Final Fantasy 7
+                  </li>
+                  <li class="list-group-item albumTracklist">Outro</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img
+            src="img/sonic-firestorm.jpg"
+            class="card-img-top rounded"
+            alt="..."
+          />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">Sonic Firestorm</h4>
+            <h5 class="card-text albumArtist">Dragonforce</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Power Metal</h5>
+              <h5 class="card-text albumDuration">56:35</h5>
+            </div>
+
+            <a
+              href="#sonicTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="sonicTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">
+                    My Spirit Will Go On
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Fury of the Storm
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Fields of Despair
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Dawn Over a New World
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Above the Winter Moonlight
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Soldiers of the Wasteland
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Prepare for War
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Once in a Lifetime
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Cry of the Brave
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img
+            src="img/pmj-essentials.jpg"
+            class="card-img-top rounded"
+            alt="..."
+          />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">The Essentials</h4>
+            <h5 class="card-text albumArtist">Postmodern Jukebox</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Jazz/Swing covers</h5>
+              <h5 class="card-text albumDuration">67:00</h5>
+            </div>
+
+            <a
+              href="#pmjTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="pmjTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">We Can't Stop</li>
+                  <li class="list-group-item albumTracklist">Maps</li>
+                  <li class="list-group-item albumTracklist">Creep</li>
+                  <li class="list-group-item albumTracklist">
+                    All About That Bass
+                  </li>
+                  <li class="list-group-item albumTracklist">No Diggity</li>
+                  <li class="list-group-item albumTracklist">
+                    I Believe in a Thing Called Love
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    My Heart Will Go On
+                  </li>
+                  <li class="list-group-item albumTracklist">Royals</li>
+                  <li class="list-group-item albumTracklist">Stacy's Mom</li>
+                  <li class="list-group-item albumTracklist">Rude</li>
+                  <li class="list-group-item albumTracklist">
+                    Sweet Child O'Mine
+                  </li>
+                  <li class="list-group-item albumTracklist">Thrift Shop</li>
+                  <li class="list-group-item albumTracklist">Burn</li>
+                  <li class="list-group-item albumTracklist">
+                    Seven Nation Army
+                  </li>
+                  <li class="list-group-item albumTracklist">Sorry</li>
+                  <li class="list-group-item albumTracklist">Halo</li>
+                  <li class="list-group-item albumTracklist">Hey Ya!</li>
+                  <li class="list-group-item albumTracklist">
+                    Such Great Heights
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img
+            src="img/the-life-of-pablo.jpg"
+            class="card-img-top rounded"
+            alt="..."
+          />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">The Life of Pablo</h4>
+            <h5 class="card-text albumArtist">Kanye West</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Rap/Gospel</h5>
+              <h5 class="card-text albumDuration">66:39</h5>
+            </div>
+
+            <a
+              href="#lopTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="lopTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">
+                    Ultralight Beam
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Father Stretch My Hands, Pt. 1
+                  </li>
+                  <li class="list-group-item albumTracklist">Pt. 2</li>
+                  <li class="list-group-item albumTracklist">Famous</li>
+                  <li class="list-group-item albumTracklist">Feedback</li>
+                  <li class="list-group-item albumTracklist">Low Lights</li>
+                  <li class="list-group-item albumTracklist">Highlights</li>
+                  <li class="list-group-item albumTracklist">Freestyle 4</li>
+                  <li class="list-group-item albumTracklist">I Love Kanye</li>
+                  <li class="list-group-item albumTracklist">Waves</li>
+                  <li class="list-group-item albumTracklist">FML</li>
+                  <li class="list-group-item albumTracklist">Real Friends</li>
+                  <li class="list-group-item albumTracklist">Wolves</li>
+                  <li class="list-group-item albumTracklist">Frank's Track</li>
+                  <li class="list-group-item albumTracklist">
+                    Siiiiiiiiilver Surffffeeeeer Intermission
+                  </li>
+                  <li class="list-group-item albumTracklist">30 Hours</li>
+                  <li class="list-group-item albumTracklist">
+                    No More Parties in LA
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Facts (Charlie Heat Version)
+                  </li>
+                  <li class="list-group-item albumTracklist">Fade</li>
+                  <li class="list-group-item albumTracklist">Saint Pablo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img src="img/take-care.jpg" class="card-img-top rounded" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">Take Care</h4>
+            <h5 class="card-text albumArtist">Drake</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Rap/R&B</h5>
+              <h5 class="card-text albumDuration">80:18</h5>
+            </div>
+
+            <a
+              href="#takecareTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="takecareTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">
+                    Over My Dead Body
+                  </li>
+                  <li class="list-group-item albumTracklist">Shot for Me</li>
+                  <li class="list-group-item albumTracklist">Headlines</li>
+                  <li class="list-group-item albumTracklist">Crew Love</li>
+                  <li class="list-group-item albumTracklist">Take Care</li>
+                  <li class="list-group-item albumTracklist">Marvins Room</li>
+                  <li class="list-group-item albumTracklist">
+                    Buried Alive Interlude
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Under Ground Kings
+                  </li>
+                  <li class="list-group-item albumTracklist">We'll Be Fine</li>
+                  <li class="list-group-item albumTracklist">Make Me Proud</li>
+                  <li class="list-group-item albumTracklist">Lord Knows</li>
+                  <li class="list-group-item albumTracklist">
+                    Cameras / Good Ones Go Interlude
+                  </li>
+                  <li class="list-group-item albumTracklist">Doing It Wrong</li>
+                  <li class="list-group-item albumTracklist">The Real Her</li>
+                  <li class="list-group-item albumTracklist">
+                    Look What You've Done
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    HYFR (Hell Ya Fucking Right)
+                  </li>
+                  <li class="list-group-item albumTracklist">Practice</li>
+                  <li class="list-group-item albumTracklist">The Ride</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img
+            src="img/houseOfBalloons.jpg"
+            class="card-img-top rounded"
+            alt="..."
+          />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">House of Ballons</h4>
+            <h5 class="card-text albumArtist">Weeknd</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Alternate R&B</h5>
+              <h5 class="card-text albumDuration">49:34</h5>
+            </div>
+
+            <a
+              href="#hobTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="hobTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">High for This</li>
+                  <li class="list-group-item albumTracklist">What You Need</li>
+                  <li class="list-group-item albumTracklist">
+                    House of Balloons/Glass Table Girls
+                  </li>
+                  <li class="list-group-item albumTracklist">The Morning</li>
+                  <li class="list-group-item albumTracklist">Wicked Games</li>
+                  <li class="list-group-item albumTracklist">
+                    The Party & The After Party
+                  </li>
+                  <li class="list-group-item albumTracklist">Coming Down</li>
+                  <li class="list-group-item albumTracklist">Loft Music</li>
+                  <li class="list-group-item albumTracklist">The Knowing</li>
+                  <li class="list-group-item albumTracklist">Twenty Eight</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img src="img/thursday.jpg" class="card-img-top rounded" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">Thursday</h4>
+            <h5 class="card-text albumArtist">Weeknd</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Alternative R&B</h5>
+              <h5 class="card-text albumDuration">50:21</h5>
+            </div>
+
+            <a
+              href="#thurTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="thurTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">Lonely Star</li>
+                  <li class="list-group-item albumTracklist">
+                    Life of the Party
+                  </li>
+                  <li class="list-group-item albumTracklist">Thursday</li>
+                  <li class="list-group-item albumTracklist">The Zone</li>
+                  <li class="list-group-item albumTracklist">
+                    The Birds Part 1
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    The Birds Part 2
+                  </li>
+                  <li class="list-group-item albumTracklist">Gone</li>
+                  <li class="list-group-item albumTracklist">Rolling Stone</li>
+                  <li class="list-group-item albumTracklist">
+                    Heaven or Las Vegas
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img src="img/echoes.jpg" class="card-img-top rounded" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">Echoes of Silence</h4>
+            <h5 class="card-text albumArtist">Weeknd</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Alternate R&B</h5>
+              <h5 class="card-text albumDuration">45:45</h5>
+            </div>
+
+            <a
+              href="#echoesTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="echoesTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">D.D.</li>
+                  <li class="list-group-item albumTracklist">Montreal</li>
+                  <li class="list-group-item albumTracklist">Outside</li>
+                  <li class="list-group-item albumTracklist">XO/The Host</li>
+                  <li class="list-group-item albumTracklist">Initiation</li>
+                  <li class="list-group-item albumTracklist">Same Old Song</li>
+                  <li class="list-group-item albumTracklist">The Fall</li>
+                  <li class="list-group-item albumTracklist">Next</li>
+                  <li class="list-group-item albumTracklist">
+                    Echoes of Silence
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img src="img/bastion.jpg" class="card-img-top rounded" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">Bastion OST</h4>
+            <h5 class="card-text albumArtist">Darren Korb</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Electronic/Rock</h5>
+              <h5 class="card-text albumDuration">1:00:18</h5>
+            </div>
+
+            <a
+              href="#bastionTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="bastionTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">Get Used to It</li>
+                  <li class="list-group-item albumTracklist">A Proper Story</li>
+                  <li class="list-group-item albumTracklist">
+                    In Case of Trouble
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Bynn the Breaker
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    The Sole Regret
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Twisted Streets
+                  </li>
+                  <li class="list-group-item albumTracklist">Terminal March</li>
+                  <li class="list-group-item albumTracklist">Percy's Escape</li>
+                  <li class="list-group-item albumTracklist">Faith of Jevel</li>
+                  <li class="list-group-item albumTracklist">
+                    Mine, Windbag, Mine
+                  </li>
+                  <li class="list-group-item albumTracklist">Slinger's Song</li>
+                  <li class="list-group-item albumTracklist">
+                    Build That Wall (Zia's Theme)
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Spike In a Rail
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    What's Left Undone
+                  </li>
+                  <li class="list-group-item albumTracklist">Brusher Patrol</li>
+                  <li class="list-group-item albumTracklist">
+                    The Mancer's Dilema
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Mother, I'm Here (Zulf's Theme)
+                  </li>
+                  <li class="list-group-item albumTracklist">Pale Watchers</li>
+                  <li class="list-group-item albumTracklist">
+                    The Bottom Feeders
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    From Wharf to Wilds
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Setting Sail, Coming Home (End Theme)
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    The Pantheon (Ain't Gonna Catch You)
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img src="img/jim-croce.jpg" class="card-img-top rounded" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">
+              You Don't Mess Around with Jim
+            </h4>
+            <h5 class="card-text albumArtist">Jim Croce</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Folk Rock</h5>
+              <h5 class="card-text albumDuration">33:22</h5>
+            </div>
+
+            <a
+              href="#croceTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="croceTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">
+                    You Don't Mess Around with Jim
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Tomorrow's Gonna Be A Brighter Day
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    New York's Not My Home
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Hard Time Losin' Man
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Photographs and Memories
+                  </li>
+                  <li class="list-group-item albumTracklist">
+                    Walkin' Back to Georgia
+                  </li>
+                  <li class="list-group-item albumTracklist">Operator</li>
+                  <li class="list-group-item albumTracklist">
+                    Time in a Bottle
+                  </li>
+                  <li class="list-group-item albumTracklist">Rapid Roy</li>
+                  <li class="list-group-item albumTracklist">Box No. 10</li>
+                  <li class="list-group-item albumTracklist">
+                    A Long Time Ago
+                  </li>
+                  <li class="list-group-item albumTracklist">Hey Tomrrow</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card col-6 col-sm-4 col-xl-3 albumContainer mx-auto my-3"
+          style="max-width: 18rem"
+        >
+          <img src="img/nectar.jpg" class="card-img-top rounded" alt="..." />
+          <div class="card-body">
+            <h4 class="card-title albumTitle">Nectar</h4>
+            <h5 class="card-text albumArtist">Joji</h5>
+            <div class="d-flex justify-content-around">
+              <h5 class="card-text albumGenre">Alt R&B/Lo-fi/Trip Hop</h5>
+              <h5 class="card-text albumDuration">53:05</h5>
+            </div>
+
+            <a
+              href="#necTracklist"
+              data-toggle="collapse"
+              role="button"
+              class="btn btn-dark"
+              >Tracklist</a
+            >
+            <div class="collapse" id="necTracklist">
+              <div class="card-text">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item albumTracklist">Ew</li>
+                  <li class="list-group-item albumTracklist">Modus</li>
+                  <li class="list-group-item albumTracklist">Tick Tock</li>
+                  <li class="list-group-item albumTracklist">Daylight</li>
+                  <li class="list-group-item albumTracklist">Upgrade</li>
+                  <li class="list-group-item albumTracklist">Gimme Love</li>
+                  <li class="list-group-item albumTracklist">Run</li>
+                  <li class="list-group-item albumTracklist">Sanctuary</li>
+                  <li class="list-group-item albumTracklist">High Hopes</li>
+                  <li class="list-group-item albumTracklist">Nitrous</li>
+                  <li class="list-group-item albumTracklist">Pretty Boy</li>
+                  <li class="list-group-item albumTracklist">Normal People</li>
+                  <li class="list-group-item albumTracklist">Afterthought</li>
+                  <li class="list-group-item albumTracklist">Mr. Hollywood</li>
+                  <li class="list-group-item albumTracklist">777</li>
+                  <li class="list-group-item albumTracklist">Reanimator</li>
+                  <li class="list-group-item albumTracklist">Like You Do</li>
+                  <li class="list-group-item albumTracklist">Your Man</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EXERCISE 4
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+        -->
+    <div id="info" class="container">
+      <div class="row mt-4">
+        <div class="col-5 col-md-3">
+          <div class="list-group text-center" id="list-tab" role="tablist">
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-xx-list"
+              data-toggle="list"
+              href="#list-xx"
+              role="tab"
+              aria-controls="xx"
+              >xx</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-starbomb-list"
+              data-toggle="list"
+              href="#list-starbomb"
+              role="tab"
+              aria-controls="starbomb"
+              >Starbomb</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-sonicF-list"
+              data-toggle="list"
+              href="#list-sonicF"
+              role="tab"
+              aria-controls="sonicF"
+              >Sonic Firestorm</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-pmj-list"
+              data-toggle="list"
+              href="#list-pmj"
+              role="tab"
+              aria-controls="pmj"
+              >The Essentials</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-lop-list"
+              data-toggle="list"
+              href="#list-lop"
+              role="tab"
+              aria-controls="lop"
+              >The Life of Pablo</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-takecare-list"
+              data-toggle="list"
+              href="#list-takecare"
+              role="tab"
+              aria-controls="takecare"
+              >Take Care</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-balloons-list"
+              data-toggle="list"
+              href="#list-balloons"
+              role="tab"
+              aria-controls="balloons"
+              >House of Balloons</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-thur-list"
+              data-toggle="list"
+              href="#list-thur"
+              role="tab"
+              aria-controls="thur"
+              >Thursday</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-echoes-list"
+              data-toggle="list"
+              href="#list-echoes"
+              role="tab"
+              aria-controls="echoes"
+              >Echoes of Silence</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-bastion-list"
+              data-toggle="list"
+              href="#list-bastion"
+              role="tab"
+              aria-controls="bastion"
+              >Bastion OST</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-croce-list"
+              data-toggle="list"
+              href="#list-croce"
+              role="tab"
+              aria-controls="croce"
+              >You Don't Mess Around with Jim</a
+            >
+            <a
+              class="list-group-item list-group-item-action list-group-item-dark albumList"
+              id="list-nectar-list"
+              data-toggle="list"
+              href="#list-nectar"
+              role="tab"
+              aria-controls="nectar"
+              >Nectar</a
+            >
+          </div>
+        </div>
+        <div class="col-7 col-md-9">
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active albumContainer p-2"
+              id="list-xx"
+              role="tabpanel"
+              aria-labelledby="list-xx-list"
+            >
+              <p>
+                xx is the debut album by English indie pop band the xx. It was
+                released on 14 August 2009 by Young Turks, an imprint label of
+                XL Recordings. After signing a record contract with XL, the xx
+                recorded the album from December 2008 to February 2009 at the
+                label's in-house studio in London. The audio engineer Rodaidh
+                McDonald worked with the band during the recording sessions and
+                attempted to reproduce the intimate, unembellished quality of
+                their demos. The band's Jamie Smith produced xx on his laptop
+                and created electronic beats for the songs, which he then mixed
+                in a detailed process with McDonald. Although the xx had been
+                strongly influenced by R&B acts, the album also drew comparisons
+                from critics to alternative rock, electronica and post-punk
+                sounds. The melancholic songs on xx feature minimalist
+                arrangements and are built around Smith's beats, Oliver Sim's
+                basslines and sparse guitar figures played by Baria Qureshi and
+                Romy Madley Croft, who employed reverb in her lead guitar parts.
+                Most of the songs are sung as low-key duets by Croft and Sim,
+                both of whom wrote emotional lyrics about love, intimacy, loss
+                and desire.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-starbomb"
+              role="tabpanel"
+              aria-labelledby="list-starbomb-list"
+            >
+              <p>
+                In summer 2013, Avidan began making comments about creating a
+                new music project with Wecht and Hanson. The project wasn't
+                officially announced until December 2, 2013, when the group
+                released a preview of their song "I Choose You to Die" on Ninja
+                Sex Party's official YouTube channel. They also announced that
+                their first album, the self-titled Starbomb, would be released
+                only two weeks later on December 17, 2013. Leading up to the
+                album's launch date, the group released further previews on the
+                Ninja Sex Party and Game Grumps YouTube channels, the latter of
+                which was hosted by Avidan and Hanson. In the weeks following
+                its release, Starbomb placed on multiple Billboard charts,
+                reaching #1 on Comedy Albums and Heatseekers Albums. Music
+                videos for several of the album's songs such as "Luigi's Ballad"
+                (in which Rachel Bloom voiced Princess Peach) and "It's
+                Dangerous to Go Alone" were released to YouTube that same year
+                and in spring of the following year. Destructoid commented on
+                the album's release, stating that "While the concept itself may
+                seem a bit juvenile, the awesome music (provided by Ninja Sex
+                Party) and hilarious situations are more than enough to keep the
+                more "mature" fan entertained."
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-sonicF"
+              role="tabpanel"
+              aria-labelledby="list-sonicF-list"
+            >
+              <p>
+                Sonic Firestorm is the second studio album by British power
+                metal band DragonForce, released through Noise Records on 11 May
+                2004. It is the first album to feature bassist Adrian Lambert
+                and drummer Dave Mackintosh. The reissue of this album was
+                released on 22 February 2010, along with a remixed and
+                remastered version of the band's first album, Valley of the
+                Damned. The re-release also came with the bonus track "Cry of
+                the Brave", which was a Japanese bonus track on the original
+                release.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-pmj"
+              role="tabpanel"
+              aria-labelledby="list-pmj-list"
+            >
+              <p>
+                Postmodern Jukebox, also widely known by the acronym PMJ, is a
+                rotating musical collective founded by arranger and pianist
+                Scott Bradlee in 2011. PMJ is known for reworking popular modern
+                music into different vintage genres, especially early 20th
+                century forms such as swing and jazz. Postmodern Jukebox has
+                amassed over 1.4 billion YouTube views and 5 million
+                subscribers. Each week, Postmodern Jukebox releases a new video
+                on YouTube. Although originally most were filmed casually in
+                Bradlee's living room, sets became more elaborate over time. The
+                band has covered songs by artists ranging from Lady Gaga and The
+                Strokes to Katy Perry and the White Stripes. Since their
+                beginnings as a small group of friends making music in a
+                basement in Queens, New York, Postmodern Jukebox has gone on to
+                feature 70 different performers and tour six continents.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-lop"
+              role="tabpanel"
+              aria-labelledby="list-lop-list"
+            >
+              <p>
+                The Life of Pablo is the seventh studio album by American rapper
+                and producer Kanye West. It was released on February 14, 2016,
+                through GOOD Music and distributed by Def Jam Recordings.
+                Recording sessions took place from 2013 to 2016, in Italy,
+                Mexico, Canada, and the United States. Production was handled by
+                West and a variety of other producers, including co-executive
+                producers Rick Rubin and Noah Goldstein. West also enlisted
+                guest vocals for the album, including Chance the Rapper, Kid
+                Cudi, Desiigner, Rihanna, The Weeknd, Ty Dolla Sign, Post
+                Malone, Kendrick Lamar, Sia, Vic Mensa and Young Thug. The
+                release of The Life of Pablo was preceded by several promotional
+                singles, including the tracks "Real Friends" and "No More
+                Parties in LA". During the months before release, the title and
+                tracklist of the album went through several publicized changes.
+                An early version of it was premiered by West at Madison Square
+                Garden on February 11, 2016, as part of his Yeezy Season 3
+                fashion show. After several additional sessions and alterations,
+                the launch occurred exclusively for streaming on Tidal three
+                days later.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-takecare"
+              role="tabpanel"
+              aria-labelledby="list-takecare-list"
+            >
+              <p>
+                Take Care is the second studio album by Canadian rapper Drake.
+                It was released on November 15, 2011 by Young Money
+                Entertainment, Cash Money Records and Republic Records. The
+                album features guest appearances from The Weeknd, Rihanna,
+                Kendrick Lamar, Birdman, Nicki Minaj, Rick Ross, Lil Wayne, and
+                André 3000. Alongside prominent production from the album's
+                executive producers Drake and 40, further contributors include
+                T-Minus, Chantal Kreviazuk, Boi-1da, Illangelo, Jamie xx, Supa
+                Dups, Just Blaze, Chase N. Cashe, and Doc McKinney. Prior to
+                Take Care, Drake released Thank Me Later, which experienced
+                positive critical success, but left him feeling disjointed about
+                the album's musical content. Expressing a desire to reunite with
+                40, his long-time producer who featured in parts on Thank Me
+                Later, the duo worked extensively on the new album once
+                recording sessions began in 2010. Drake's vocals on the album
+                feature emotional crooning, alto vocals, a guttural cadence, a
+                melodic flow, and a larger emphasis on singing than on Thank Me
+                Later. In comparison to his debut album, Drake revealed that the
+                album is called Take Care because "I get to take my time this
+                go-round [rather than rush]".
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-balloons"
+              role="tabpanel"
+              aria-labelledby="list-balloons-list"
+            >
+              <p>
+                House of Balloons received widespread acclaim from critics, and
+                is considered by many to be one of the most influential R&B
+                releases in recent years. Preceded by a string of low-profile
+                buzz single releases throughout 2010, the mixtape attracted
+                significant interest due to the then-anonymous identity of the
+                individual behind the Weeknd. Metacritic, which assigns a
+                normalized rating based on reviews by industry professionals,
+                gave House of Balloons a rating of 87, indicating "universal
+                acclaim", based on 16 reviews. Sean Fennessey of The Village
+                Voice was impressed by the mixtape, calling it "patient, often
+                gorgeous, and consistently louche... with the sort of blown-out
+                underbelly and echo-laden crooning that has already made Drake's
+                less-than-a-year-old Thank Me Later such an influential
+                guidepost." Maegan McGregor of Exclaim! stated that House of
+                Balloons "easily stands as one of the year's best debuts so far,
+                hipster, top 40 or otherwise." Sputnikmusic's Tyler Fisher said
+                that "despite being a free album, House of Balloons feels like a
+                true album, a true labor of love." Tom Ewing of The Guardian
+                felt that while the Weeknd's vocals and lyrics on House of
+                Balloons "aren't especially strong by R&B standards," much of
+                the album's attention was attracted by its strong command of
+                mood.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-thur"
+              role="tabpanel"
+              aria-labelledby="list-thur-list"
+            >
+              <p>
+                Thursday received generally positive reviews from critics. At
+                Metacritic, which assigns a normalized rating out of 100 to
+                reviews from mainstream publications, the mixtape received an
+                average score of 80, based on 17 reviews. Evan Rytlewski of The
+                A.V. Club said, "It's a rare songwriter who can craft music
+                that's so repellent yet also so irresistible." Winston Robbins
+                of Consequence of Sound said, "Despite the ridiculously high
+                highs of this album, it fails to maintain a great pace
+                throughout. It struggles back and forth between "good" and
+                "great," whereas its foregoer grabbed "great" by the balls on
+                the first track and never let go." Benjamin Boles of Now said,
+                "It's not quite perfect: his voice is the star of the show but
+                is occasionally buried under the clever beats and production.
+                But that's a small complaint about someone who's looking more
+                and more like one of the most exciting artists to emerge this
+                year." Q magazine stated, "Toronto outfit, The Weeknd, has been
+                hailed as one of the most exciting new sounds in modern R&B --
+                hype that, on the basis of this equally startling follow-up,
+                seems entirely justified." Brandon Soderberg of Pitchfork said,
+                "Though there's less breathing space on Thursday, and fewer
+                melodic hooks, it still feels of a piece with House of
+                Balloons."
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-echoes"
+              role="tabpanel"
+              aria-labelledby="list-echoes-list"
+            >
+              <p>
+                Echoes of Silence received widespread acclaim from critics. At
+                Metacritic, which assigns a normalized rating out of 100 to
+                reviews from mainstream publications, the mixtape received an
+                average score of 82, based on 17 reviews. Evan Rytlewski of The
+                A.V. Club said, "It's Tesfaye's total commitment to his ghastly
+                persona that makes Echoes Of Silence so entrancingly chilling."
+                Greg Kot of Chicago Tribune said, "It's an impressive
+                consolidation of his strengths, tightening up his songwriting
+                and sharpening his often disturbing wordplay." Kyle Anderson of
+                Entertainment Weekly said, "Tesfaye's velvety melodies infuse
+                his trippy minimalism like incense smoke, getting lost only on
+                the too-woozy title track." Alexis Petridis of The Guardian
+                said, "The dragging beats, washes of synthesiser and eclectic
+                musical references – chillwave and crunk hip-hop, Aaliyah and
+                France Gall – somehow contrive to sound not just eerie and
+                desolate but cosseting as well, inexorably drawing the listener
+                into a deeply troubling world."
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-bastion"
+              role="tabpanel"
+              aria-labelledby="list-bastion-list"
+            >
+              <p>
+                Bastion's soundtrack was produced and composed by Darren Korb, a
+                songwriter and composer. He was selected to pen the soundtrack
+                by Rao, who was a childhood friend of Korb. Bastion was the
+                first video game that Korb had scored; prior to it he had worked
+                on a few smaller television shows and movies. He was brought
+                onto the team in the beginning stages of the project, and
+                several of the pieces he developed were created prior to the
+                final design of the levels with which they were associated. The
+                musical style of the soundtrack has been described by Korb as
+                "acoustic frontier trip hop". It was intended to evoke both the
+                American frontier and an exotic fantasy world. The songs combine
+                "heavily sampled beats in layers, along with acoustic elements",
+                and he determined that he wanted to create the soundtrack in
+                that style as it was different from video game soundtracks that
+                he had heard before. The music was recorded in Korb's closet at
+                his New York City apartment, as were the sound effects and more
+                than three thousand lines of narration by Cunningham.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-croce"
+              role="tabpanel"
+              aria-labelledby="list-croce-list"
+            >
+              <p>
+                The album was recorded over a three to four-week period for
+                approximately $18,000, with most funding coming from the
+                PolyGram Group in Baarn, the Netherlands on the basis of hearing
+                an 8-song demo tape assembled by production team Cashman & West.
+                The deal with PolyGram was made after team attorney Phil Kurnit
+                approached a contact within the record company who then had
+                PolyGram executives listen to the demo tape. After having the
+                finished album rejected by up to 40 record labels, Croce was
+                signed to ABC Records after Cashman & West had a chance meeting
+                with ABC promotion man Marty Kupps. Kupps urged label head Jay
+                Lasker to sign Croce after hearing cuts from a cassette tape of
+                the finished album.
+              </p>
+            </div>
+            <div
+              class="tab-pane fade albumContainer p-2"
+              id="list-nectar"
+              role="tabpanel"
+              aria-labelledby="list-nectar-list"
+            >
+              <p>
+                Nectar is the second studio album by Japanese singer-songwriter
+                Joji, released on 25 September 2020 via 88rising. It features
+                the singles "Sanctuary", "Run", "Gimme Love" and "Daylight", as
+                well as collaborations with Benee, Lil Yachty, Omar Apollo, Yves
+                Tumor and Rei Brown.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- EXERCISE 5
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+    <section id="hallOfShame">
+      <div class="container mt-4">
+        <div class="col-12 text-center">
+          <h2>Bad Albums</h2>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 col-sm-4 col-lg-3">
+            <img
+              src="img/placeholder.jpg"
+              class="rounded img-fluid"
+              alt="bad_album"
+              width="250px"
+            />
+          </div>
+          <div class="col-12 col-sm-8 col-lg-9 albumContainer overflow-auto">
+            <p>
+              I generally like all music, so i've decided I hate this album
+              based solely on the cover. The music itself might be good, because
+              accordions sound great, but I will never listen to this album
+              because of its cover. He looks like an unholy fusion of Pablo
+              Escobar and Borat.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 col-sm-8 col-lg-9 albumContainer mb-4">
+            <p>
+              Dick Black, I don't know who you are or who your producer is.
+              Please, for the love of music, slap whoever named your album. I
+              feel like I might enjoy your music, but I will never listen to it
+              because of your terrible album name.
+            </p>
+          </div>
+          <div class="ol-12 col-sm-4 col-lg-3 mb-4">
+            <img
+              src="img/bad_album2.jpg"
+              class="rounded img-fluid"
+              alt="bad_album_2"
+              width="250px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- EXERCISE 6
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+    <div id="stan" class="container mt-4">
+      <div class="col-12 text-center">
+        <h2>One of the Best Albums</h2>
+      </div>
+      <div class="row mt-4">
+        <div class="col-8 albumContainer">
+          <p>
+            I'm running out of time for the tasks. Lorem ipsum dolor, sit amet
+            consectetur adipisicing elit. Quidem, tenetur. Ipsam mollitia,
+            ducimus recusandae laborum magni maxime voluptatum ab repellendus
+            quod? Debitis velit fuga aspernatur! Soluta ex veniam voluptatum
+            modi.
+          </p>
+        </div>
+        <div class="col-4">
+          <img
+            src="img/stan.jpg"
+            class="rounded float-right img-fluid"
+            alt="stan_album"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+    <div id="tapestry" class="container-fluid text-center mt-4">
+      <img src="img/bastion.jpg" alt="..." />
+      <img src="img/echoes.jpg" alt="..." />
+      <img src="img/houseOfBalloons.jpg" alt="..." />
+      <img src="img/jim-croce.jpg" alt="..." />
+      <img src="img/nectar.jpg" alt="..." />
+      <img src="img/pmj-essentials.jpg" alt="..." />
+      <img src="img/sonic-firestorm.jpg" alt="..." />
+      <img src="img/stan.jpg" alt="..." />
+      <img src="img/starbomb.webp" alt="..." />
+      <img src="img/take-care.jpg" alt="..." />
+
+      <img src="img/the-life-of-pablo.jpg" alt="..." />
+
+      <img src="img/thursday.jpg" alt="..." />
+
+      <img src="img/xx_album_cover.svg.png" alt="..." />
+
+      <img src="img/bastion.jpg" alt="..." />
+      <img src="img/echoes.jpg" alt="..." />
+      <img src="img/houseOfBalloons.jpg" alt="..." />
+      <img src="img/jim-croce.jpg" alt="..." />
+      <img src="img/nectar.jpg" alt="..." />
+      <img src="img/pmj-essentials.jpg" alt="..." />
+      <img src="img/sonic-firestorm.jpg" alt="..." />
+      <img src="img/stan.jpg" alt="..." />
+      <img src="img/starbomb.webp" alt="..." />
+      <img src="img/take-care.jpg" alt="..." />
+
+      <img src="img/the-life-of-pablo.jpg" alt="..." />
+    </div>
+
+    <!-- EXERCISE 8
+            Implement a footer with some information / social links
+        -->
+    <footer>
+      <div class="container-fluid mt-4">
+        <div class="row bg-dark text-light">
+          <div
+            class="col d-flex flex-row justify-content-around align-items-center"
+          >
+            <h6 class="my-auto">Abdul's Taste in Music</h6>
+            <h6 class="my-auto">Not Copyright</h6>
+            <h6 class="my-auto">
+              There's a bunch more, but my hands are getting tired
+            </h6>
+            <a href="https://github.com/ASMahmood">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- EXTRA:
+         EXERCISE 9
+            Create album details that are going to be toggled on and off by clicking on the album image
+        -->
+
+    <!-- EXERCISE 10
+            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 11
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+body {
+  background-color: #dcc9b6;
+}
+
+nav {
+  background-color: #6d4c3d;
+}
+
+.card {
+  padding: 0;
+}
+
+.cardsBackground {
+  background-image: url("img/background.jpg");
+}
+
+.albumContainer {
+  background: #6d4c3d;
+  color: #abc4ab;
+  border-radius: 5px;
+}
+
+.albumTitle {
+  font-family: "Permanent Marker", cursive;
+  color: #abc4ab;
+}
+
+.albumArtist {
+  font-family: "Caveat", cursive;
+  color: #abc4ab;
+}
+
+.albumGenre {
+  font-family: "Caveat", cursive;
+  color: #abc4ab;
+}
+
+.albumDuration {
+  font-family: "Caveat", cursive;
+  color: #abc4ab;
+}
+
+.albumList {
+  font-family: "Permanent Marker", cursive;
+  color: #6d4c3d;
+}
+
+.albumTracklist {
+  background: #6d4c3d;
+  font-family: "Caveat", cursive;
+  color: #abc4ab;
+}
+
+#hallOfShame {
+  background-color: #6d4c3d;
+}
+
+#hallOfShame h2,
+#stan h2 {
+  color: #abc4ab;
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
+  text-align: center;
+}
+
+#stan h2 {
+  color: #6d4c3d;
+}
+
+#hallOfShame .albumContainer {
+  background-color: #dcc9b6;
+  color: #6d4c3d;
+  padding-top: 10px;
+}
+
+#list-tab,
+#nav-tabContent {
+  height: 200px;
+  overflow-y: auto;
+}
+
+#tapestry {
+  padding: 5px 0;
+  background-color: black;
+}
+
+#tapestry img {
+  width: 16%;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  #hallOfShame .albumContainer {
+    margin-top: 20px;
+  }
+}
